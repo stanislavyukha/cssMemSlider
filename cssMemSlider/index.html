@@ -5,6 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IT memes</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="slider">
+      <input type="radio" name="slides" id="slider-radio-1" checked />
+
+      <input type="radio" name="slides" id="slider-radio-2" />
+
+      <input type="radio" name="slides" id="slider-radio-3" />
+
+      <input type="radio" name="slides" id="slider-radio-4" />
+
+      <div class="slides">
+        <div id="slide-1" class="slide"></div>
+        <div id="slide-2" class="slide">
+          <video
+            src="assets/video/meme-2.mp4"
+            controls
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div id="slide-3" class="slide"></div>
+        <div id="slide-4" class="slide"></div>
+      </div>
+      <div class="bullets">
+        <label
+          id="slider-bullet-1"
+          for="slider-radio-1"
+          class="slider-bullet"
+        ></label>
+        <label
+          id="slider-bullet-2"
+          for="slider-radio-2"
+          class="slider-bullet"
+        ></label>
+        <label
+          id="slider-bullet-3"
+          for="slider-radio-3"
+          class="slider-bullet"
+        ></label>
+        <label
+          id="slider-bullet-4"
+          for="slider-radio-4"
+          class="slider-bullet"
+        ></label>
+      </div>
+      <div class="captions">
+        <p id="slider-caption-1">Morpheus brings you truth ☝️</p>
+        <p id="slider-caption-2">Oh my poor code! Look what he`s doing 😳</p>
+        <p id="slider-caption-3">
+          Java opens programming for you as well as food 😁
+        </p>
+        <p id="slider-caption-4">
+          Well regex is funny thing unti you learn it 🤯
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
