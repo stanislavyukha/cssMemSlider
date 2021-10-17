@@ -1,6 +1,9 @@
 html {
   font-size: 10px;
 }
+a:visited {
+  color: green;
+}
 body * {
   box-sizing: border-box;
 }
@@ -118,6 +121,7 @@ input[type='radio'] {
   #slider-bullet-4
   .dot-inner {
   background: transparent;
+  border: 0.3rem solid #71abff;
 }
 
 .slider
@@ -266,5 +270,34 @@ input[type='radio'] {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media all and (pointer: coarse) {
+  .slider
+    #slider-radio-1:checked
+    ~ .slider-pagination
+    .bullets
+    #slider-bullet-1:hover
+    .dot-inner,
+  .slider
+    #slider-radio-2:checked
+    ~ .slider-pagination
+    .bullets
+    #slider-bullet-2:hover
+    .dot-inner,
+  .slider
+    #slider-radio-3:checked
+    ~ .slider-pagination
+    .bullets
+    #slider-bullet-3:hover
+    .dot-inner,
+  .slider
+    #slider-radio-4:checked
+    ~ .slider-pagination
+    .bullets
+    #slider-bullet-4:hover
+    .dot-inner {
+    border: 0.3rem solid #71abff;
   }
 }
