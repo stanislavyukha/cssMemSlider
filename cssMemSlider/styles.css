@@ -77,7 +77,7 @@ input[type='radio'] {
 }
 .bullets .slider-bullet .dot-inner {
   display: block;
-  border: 3px solid #71abff;
+  border: 0.3rem solid #71abff;
   background-color: #71abff;
   width: 2rem;
   height: 2rem;
@@ -93,45 +93,96 @@ input[type='radio'] {
   border: white;
 }
 
-.slider #slider-radio-1:checked ~ .bullets #slider-bullet-1 .dot-inner,
-.slider #slider-radio-2:checked ~ .bullets #slider-bullet-2 .dot-inner,
-.slider #slider-radio-3:checked ~ .bullets #slider-bullet-3 .dot-inner,
-.slider #slider-radio-4:checked ~ .bullets #slider-bullet-4 .dot-inner {
+.slider
+  #slider-radio-1:checked
+  ~ .slider-pagination
+  .bullets
+  #slider-bullet-1
+  .dot-inner,
+.slider
+  #slider-radio-2:checked
+  ~ .slider-pagination
+  .bullets
+  #slider-bullet-2
+  .dot-inner,
+.slider
+  #slider-radio-3:checked
+  ~ .slider-pagination
+  .bullets
+  #slider-bullet-3
+  .dot-inner,
+.slider
+  #slider-radio-4:checked
+  ~ .slider-pagination
+  .bullets
+  #slider-bullet-4
+  .dot-inner {
   background: transparent;
-}
-
-.slider #slider-radio-1:checked ~ .bullets #slider-bullet-1:hover .dot-inner,
-.slider #slider-radio-2:checked ~ .bullets #slider-bullet-2:hover .dot-inner,
-.slider #slider-radio-3:checked ~ .bullets #slider-bullet-3:hover .dot-inner,
-.slider #slider-radio-4:checked ~ .bullets #slider-bullet-4:hover .dot-inner {
-  border: 3px solid white;
 }
 
 .slider
   #slider-radio-1:checked
-  ~ .bullets
+  ~ .slider-pagination
+  .bullets
+  #slider-bullet-1:hover
+  .dot-inner,
+.slider
+  #slider-radio-2:checked
+  ~ .slider-pagination
+  .bullets
+  #slider-bullet-2:hover
+  .dot-inner,
+.slider
+  #slider-radio-3:checked
+  ~ .slider-pagination
+  .bullets
+  #slider-bullet-3:hover
+  .dot-inner,
+.slider
+  #slider-radio-4:checked
+  ~ .slider-pagination
+  .bullets
+  #slider-bullet-4:hover
+  .dot-inner {
+  border: 0.3rem solid white;
+}
+
+.slider
+  #slider-radio-1:checked
+  ~ .slider-pagination
+  .bullets
   #slider-bullet-1
   .dot:active
   .dot-inner,
 .slider
   #slider-radio-2:checked
-  ~ .bullets
+  ~ .slider-pagination
+  .bullets
   #slider-bullet-2
   .dot:active
   .dot-inner,
 .slider
   #slider-radio-3:checked
-  ~ .bullets
+  ~ .slider-pagination
+  .bullets
   #slider-bullet-3
   .dot:active
   .dot-inner,
 .slider
   #slider-radio-4:checked
-  ~ .bullets
+  ~ .slider-pagination
+  .bullets
   #slider-bullet-4
   .dot:active
   .dot-inner {
-  border: 3px solid #b1afaf;
+  border: 0.3rem solid #b1afaf;
+}
+.slider-pagination {
+  width: 100%;
+  margin-top: 20px;
+}
+.bullets {
+  width: auto;
 }
 
 .captions p {
@@ -172,6 +223,25 @@ input[type='radio'] {
   animation-duration: 2.5s;
 }
 
+@media (max-width: 1440px) {
+  .container {
+    width: 80%;
+  }
+  .captions p {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 70%;
+  }
+  .captions p {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     width: 90%;
@@ -185,24 +255,16 @@ input[type='radio'] {
     height: 1.5rem;
   }
   .captions p {
+    margin-top: 20px;
     font-size: 1.5rem;
   }
 }
 
-@media (max-width: 1440px) {
-  .container {
-    width: 80%;
-  }
-  .captions p {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .container {
-    width: 70%;
-  }
-  .captions p {
-    font-size: 3.5rem;
+@media (min-width: 769px) {
+  .slider-pagination {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
   }
 }
